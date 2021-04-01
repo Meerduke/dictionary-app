@@ -16,7 +16,8 @@ function App() {
         <Dictionary />
       </main>
       <footer>
-        Open source coded by Becca Murdoch
+        <a href="https://github.com/Meerduke/dictionary-app">Open source </a>
+        coded by Becca Murdoch
       </footer>
     </div>
   );

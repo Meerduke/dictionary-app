@@ -47,14 +47,19 @@ export default function Dictionary(props){
     if (loaded){
         return (
             <div className="Dictionary">
+                
                 <form onSubmit={handleSubmit} className="d-flex justify-content-evenly">
                     <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword}/>
                     <button className="btn btn-secondary">
                     Search
                     </button>
                 </form>
+                
                 <Results results={results} />
+                <section>
                 <Photos photos={photos} />
+                </section>
+                
             </div>
         );
     }else {

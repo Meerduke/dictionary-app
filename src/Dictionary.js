@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import './Dictionary.css';
+import Results from './Results';
 
 export default function Dictionary(){
     const [keyword, setKeyword] = useState("");
+    const [results, setResults] = useState(null);
 
     function handleRepsonse(response){
-        console.log(response.data[0].meanings[0].definitions[0].definition);
+        setResults(response.data[0]);
     }
 
     function search(event) {
@@ -23,15 +25,13 @@ export default function Dictionary(){
 
     return (
         <div className="Dictionary">
-            <p>
-                Hello from dictionary
-            </p>
             <form onSubmit={search} className="d-flex justify-content-evenly">
                 <input type="search" onChange={handleKeywordChange}/>
                 <button className="btn btn-secondary">
                 Search
                 </button>
             </form>
+            <Results results={results} />
         </div>
     )
 

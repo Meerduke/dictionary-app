@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <div className="container-fluid d-flex justify-content-evenly hero">
         <img src={dictionary} alt="" className="img-fluid hero-image"/>
         <h1>

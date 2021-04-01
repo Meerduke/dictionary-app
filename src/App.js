@@ -13,7 +13,7 @@ function App() {
         </h1>
       </div>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="dictionary"/>
       </main>
       <footer>
         <a href="https://github.com/Meerduke/dictionary-app" target="_blank" rel="noreferrer">Open source </a>

@@ -17,7 +17,7 @@ function App() {
           <Dictionary defaultKeyword="Dictionary"/>
 
         <footer>
-          <a href="https://github.com/Meerduke/dictionary-app" target="_blank" rel="noreferrer">Open source</a> coded by Becca Murdoch
+          <a href="https://github.com/Meerduke/dictionary-app" alt="Link to git repository" title="git repository" target="_blank" rel="noreferrer">Open source</a> coded by Becca Murdoch
         </footer>
       </div>
     </div>

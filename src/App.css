@@ -6,6 +6,7 @@ body {
   font-size: 80px;
   margin: 20px;
   text-transform: uppercase;
+  text-align: end;
 }
 
 .App h2 {
@@ -31,12 +32,15 @@ body {
   text-align: center;
 }
 
+@media (max-width: 992px) {
+  .App h1 {
+    text-align: center;
+  }
+}
+
 @media (max-width: 576px) {
   .App h1 {
     font-size: 24px;
-  }
-
-  .App img {
-    max-width: 300px;
+    margin: 0 auto;
   }
 }

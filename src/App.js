@@ -7,11 +7,13 @@ function App() {
   return (
     <div>
       <div className="App">
-          <div className="hero">
-            <h1>
-                Dictionary App
+          <div className="hero d-flex justify-content-center">
+            <img src={dictionary} alt="" className="img-fluid shadow d-none d-lg-block"/>
+            <h1 className="mt-5">
+                Dictionary
+                <br />
+                App
             </h1>
-            <img src={dictionary} alt="" className="img-fluid shadow"/>
           </div>
 
           <Dictionary defaultKeyword="Dictionary"/>

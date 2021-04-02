@@ -1,24 +1,25 @@
-import dictionary from "./images/dictionary-banner.jpeg";
 import Dictionary from "./Dictionary";
+import dictionary from "./images/dictionary-banner.jpeg";
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <div className="hero d-flex">
-            <img src={dictionary} alt="" className="img-fluid"/>
+    <div>
+      <div className="App">
+          <div className="hero">
             <h1>
-              Dictionary
+                Dictionary App
             </h1>
-        </div>
+            <img src={dictionary} alt="" className="img-fluid shadow"/>
+          </div>
 
-      <Dictionary defaultKeyword="Dictionary"/>
+          <Dictionary defaultKeyword="Dictionary"/>
 
-      <footer>
-        <a href="https://github.com/Meerduke/dictionary-app" target="_blank" rel="noreferrer">Open source </a>
-        coded by Becca Murdoch
-      </footer>
+        <footer>
+          <a href="https://github.com/Meerduke/dictionary-app" target="_blank" rel="noreferrer">Open source</a> coded by Becca Murdoch
+        </footer>
+      </div>
     </div>
   );
 }

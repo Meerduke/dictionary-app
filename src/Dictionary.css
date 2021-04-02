@@ -1,13 +1,62 @@
 .Dictionary form {
   text-align: center;
-  margin: 20px;
   padding: 20px;
+  font-size: 20px;
+  border-radius: 4px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgb(153, 187, 173);
+}
+
+.Dictionary form input {
+  color: rgb(153, 187, 173);
+}
+
+.Dictionary .btn-light {
+  color: rgb(153, 187, 173);
+  border: 1px solid rgb(153, 187, 173);
 }
 
 .Dictionary section {
-  background: #ffffff;
-  padding: 20px;
-  margin: 20px;
+  background-color: rgb(153, 187, 173, 0.5);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 960px;
   border-radius: 4px;
   box-shadow: 6px 9px 20px -4px rgba(0, 0, 0, 0.37);
+}
+
+.Dictionary section p {
+  line-height: 1.5;
+}
+
+.Dictionary section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Dictionary section li {
+  display: inline-block;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 576px) {
+  .Dictionary p {
+    font-size: 14px;
+  }
+
+  .Dictionary form {
+    text-align: center;
+    font-size: 14px;
+    max-width: 300px;
+    margin: 0px auto 40px;
+  }
+
+  .Dictionary section {
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+  }
 }

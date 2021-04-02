@@ -10,7 +10,7 @@ export default function Dictionary(props){
     const [loaded, setLoaded] = useState(false);
     const [photos, setPhotos] = useState(null);
 
-    function handleDictionaryRepsonse(response){
+    function handleDictionaryResponse(response){
         setResults(response.data[0]);
     }
 
@@ -21,7 +21,7 @@ export default function Dictionary(props){
     function search(){
         // https://dictionaryapi.dev/
         let apiUrl =`https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`
-        axios.get(apiUrl).then(handleDictionaryRepsonse);
+        axios.get(apiUrl).then(handleDictionaryResponse);
 
         // https://www.pexels.com/api/documentation/
         let pexelsApiKey = "563492ad6f9170000100000173e1078ee9944a90a928b537b9c82586";
@@ -47,19 +47,19 @@ export default function Dictionary(props){
     if (loaded){
         return (
             <div className="Dictionary">
-                
-                <form onSubmit={handleSubmit} className="d-flex justify-content-evenly">
+                <form onSubmit={handleSubmit} className="shadow mt-3">
+                    <label className="mb-3">Search for definitions here...</label>
+                    <br />
                     <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword}/>
-                    <button className="btn btn-secondary">
+                    <br />
+                    <button className="btn btn-light mt-4">
                     Search
                     </button>
                 </form>
-                
                 <Results results={results} />
                 <section>
-                <Photos photos={photos} />
-                </section>
-                
+                    <Photos photos={photos} />
+                </section>   
             </div>
         );
     }else {

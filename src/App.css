@@ -1,20 +1,42 @@
 body {
-  background-color: rgb(153, 187, 173, 0.5);
-}
-
-.App {
-  margin: 0 auto;
-  max-width: 960px;
+  font-family: "Poppins", sans-serif;
 }
 
 .App h1 {
-  font-size: 100px;
+  font-size: 80px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.App h2 {
+  text-transform: uppercase;
+}
+
+.App img {
+  border-radius: 4px;
+  max-width: 400px;
 }
 
 .App footer {
   text-align: center;
+  margin: 50px auto;
+  padding: 20px;
+  color: rgb(153, 187, 173);
 }
-.App .hero img {
-  display: block;
-  margin: 0 auto;
+
+.App .hero {
+  background-color: rgb(153, 187, 173, 0.5);
+  padding: 30px 0 70px 0;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .App h1 {
+    font-size: 24px;
+  }
+
+  .App img {
+    max-width: 300px;
+  }
 }

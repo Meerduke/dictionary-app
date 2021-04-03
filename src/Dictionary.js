@@ -14,8 +14,13 @@ export default function Dictionary(props){
         setResults(response.data[0]);
     }
 
-    function handlePexelsResponse(response){
-        setPhotos(response.data.photos);
+    //function handlePexelsResponse(response){
+       // setPhotos(response.data.photos);
+    //}
+
+    function pixabayResponse(response){
+        console.log(response.data);
+        setPhotos(response.data.hits);
     }
 
     function search(){
@@ -24,11 +29,16 @@ export default function Dictionary(props){
         axios.get(apiUrl).then(handleDictionaryResponse);
 
         // https://www.pexels.com/api/documentation/
-        let pexelsApiKey = "563492ad6f9170000100000173e1078ee9944a90a928b537b9c82586";
-        let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-        let headers = { Authorization: `Bearer ${pexelsApiKey}`};
-        axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+        //let pexelsApiKey = "563492ad6f9170000100000173e1078ee9944a90a928b537b9c82586";
+        //let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+        //let headers = { Authorization: `Bearer ${pexelsApiKey}`};
+        //axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
+
+        let pixabayKey = "20992044-e61fdcd2c8a8568382fc9d454";
+        let pixabayURL = `https://pixabay.com/api/?key=${pixabayKey}&q=${keyword}&image_type=photo&per_page=6`;
+        axios.get(pixabayURL).then(pixabayResponse);
     }
+
 
     function handleSubmit(event) {
         event.preventDefault();
